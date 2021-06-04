@@ -1,0 +1,192 @@
+.contact{
+    background-color: #AACEF2;
+    height: 125vh;
+    @media (max-width: 768px) {
+        height: 100 vh;
+    }
+    .contact__container {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding: 1.5vw;
+        margin-top: 10vh;
+        align-items: center;
+
+     
+
+        .contact__title{
+            font-family: Poppins,'sans-serif';
+            padding: 0.5vw ;
+
+        }    
+
+        .contact__title > h1 {
+            display: inline-block;
+            font-size: 2.5vw;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #000000;
+            position: relative; 
+  
+            
+            @media (max-width:768px){
+                font-size: 5vw;
+            }
+        }
+
+        .contact__title > h1:before{
+            content: '';
+            left: 0;
+            right: 30%;
+            position: absolute;
+            height: 2px;
+            bottom: 0px;
+        }
+        h3{
+            display: block;
+            margin-top: 0;
+            color: white;
+            font-size: 1.2vw;
+            font-weight: 400;
+            letter-spacing: 2.5px;
+
+            @media (max-width:768px){
+                font-size: 2.5vw;
+                letter-spacing: 0.5vw;
+            }
+
+        }
+
+        .contact__content{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            .form {
+                width: 60%;
+                background: black;
+                border-radius: 8px;
+                box-shadow: 0 0 40px -10px #000;
+                padding: 20px 30px;
+                font-family: Lato, sans-serif;
+                position: relative;
+                height: 70vh;
+                color: white;
+
+                @media (max-width: 768px){
+                    width: 90%;
+                    height: 100vh;
+                }
+              }
+
+              h6 {
+                margin: 10px 0;
+                padding-bottom: 10px;
+                color: white;
+                font-family: Lato,'sans-serif';
+                font-size: 1.2vw;
+                font-weight: 400;
+                border-bottom: 3px solid #78788c;
+                
+                @media (max-width:768px){
+                    font-size: 5vw;
+                }
+              }
+              input {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                background: none;
+                outline: none;
+                resize: none;
+                border: 0;
+                font-family: Lato,'sans-serif';
+                transition: all 0.3s;
+                color: white;
+                border-bottom: 2px solid #404040;
+              }
+              input:focus {
+                border-bottom: 2px solid white;
+              }
+              textarea{
+                width: 100%;
+                box-sizing: border-box;
+                outline: none;
+                border: 0;
+                transition: all 0.3s;
+                color: white;
+                background: none;
+                padding : 10px;  
+                font-family: Lato,'sans-serif';
+                border-bottom: 2px solid #404040;
+
+              }
+              textarea:focus {
+                border-bottom: 2px solid white;
+              }
+              p:before {
+                content: attr(type);
+                display: block;
+                margin: 28px 0 0;
+                font-size: 16px;
+                color: White;
+              }
+              button {
+                float: right;
+                padding: 8px 12px;
+                margin: 20px 0 0;
+                border: 2px solid #fff;
+                background: 0;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                font-family: Lato,'sans-serif';
+                transition: all 0.3s;
+              }
+              button:hover {
+                background: white;
+                color: #000;
+              }
+              span {
+                margin: 0 5px 0 15px;
+              }
+
+              .about__social{
+                margin-top: 40px; 
+                display: flex;
+                justify-content: left;
+                
+                @media (max-width:768px){
+                    margin-top: 20vh;
+                    font-size: 2vw;
+                }
+
+                a{
+                    height: 26px ;
+                    width: 30px;    
+                    margin-right: 5px;
+                    padding-top:4px;
+                    color: #fff;
+                    background-color: #000000 ;
+                    border-radius: 3px;
+                    display: flex;
+                    border: 1px solid white;
+                    justify-content: center;
+                    -webkit-transition: all .5s ease; 
+                    transition: all .5s ease;                
+
+                }
+                    
+                a:hover{
+                    background-color: white;
+                    color: black;
+                }
+            }
+
+            
+        }
+
+    }
+    
+
+    
+}

@@ -1,0 +1,130 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: 100;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    backdrop-filter: blur(6px);
+    display: float;
+
+    .nav__content{
+        margin-left: 20px;  
+        margin-right: 20px;
+
+        .nav__avatar__container{
+            float: left;
+            .nav__avatar{
+                width: 3.5vw;
+                margin-top: 3vh;
+                margin-bottom: 10px;
+                margin-left: 30px;
+                
+                @media (max-width:768px){
+                    width: 10vw;
+                }   
+            }
+        }
+        .nav__navigation{
+            .nav__menu{
+                float: right;
+                list-style: none;
+                padding: 0;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(5,auto);
+                grid-gap: 30px; 
+                padding-top: 1.2vw;
+                margin-right: 6vw;
+
+                @media (max-width:768px){
+                    position: absolute;
+                    left: -100%;
+                    width: 100%;
+                }
+
+
+                li{
+                    height:100%;
+                    font-family: Poppins, 'sans-serif';
+
+                    a{
+                        display: block;
+                        font-size: 1.2vw;
+                        text-transform: uppercase;
+                        color:white;
+                        text-decoration: none;
+                        position: relative;
+                        height:40px ;
+                        overflow-y: hidden;
+                        // border: 2px solid white;
+                        font-weight: 400;
+                        position: relative;
+                    
+                        @media (max-width: 768px) {
+                            font-size: 5vw;
+                        }
+
+                    }
+
+                    a:after{
+                        transition: all .5s;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0%;
+                        content: '.';
+                        color: transparent;
+                        background: #fff;
+                        height: 1px;
+                    }
+
+                    a:before{
+                        transition: all .5s;
+                    }
+                    
+
+                    a:hover{
+                        color: white;
+                    }
+
+                    a:hover:after{
+                        width: 100%
+                    }
+                }
+            }
+        }
+
+        .nav__menu__mobile{
+            display: none;
+            .menu-icon{
+                display: none;
+
+                @media (max-width:768px){
+                    display: block;
+                    float: right;
+                }
+            }
+
+            @media (max-width:768px){
+                display: block;
+                margin-top: 15px;
+            }
+            
+        }  
+
+
+    }
+}
+
+.nav__black{
+    background-color: black;
+    color: white !important;
+}
+
+
+
+  

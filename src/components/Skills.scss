@@ -1,0 +1,202 @@
+.skills{
+    background-color: #AACEF2;
+    height: 140vh;
+    @media (max-width: 768px) {
+        height: 200vh;
+    }
+
+    .skills__container{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding: 1.5vw;
+        margin-top: 10vh;
+
+        .skills__title{
+            font-family: Poppins,'sans-serif';
+            padding: 0.5vw ;
+        }
+
+        .skills__title > h1 {
+            display: inline-block;
+            font-size: 2.5vw;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #000000;
+            position: relative; 
+    
+            
+            @media (max-width:768px){
+                font-size: 5vw;
+            }
+        }
+
+        .skills__title > h1:before{
+            content: '';
+            left: 0;
+            right: 30%;
+            position: absolute;
+            height: 2px;
+            background-color: black;
+            bottom: 0px;
+        }
+
+        h3{
+            display: block;
+            margin-top: 0;
+            color: white;
+            font-size: 1.2vw;
+            font-weight: 400;
+            letter-spacing: 2.5px;
+
+            @media (max-width:768px){
+                font-size: 3.2vw;
+                letter-spacing: 0.5vw;
+            }
+
+        }
+
+
+        .skills__content{
+            padding-top: 20px;
+            display: flex;
+            flex-direction: row;
+
+            @media (max-width:768px){
+                flex-direction: column;
+
+            }
+
+
+            .skills__section{
+                flex: 0 0 50%;
+                width: 100%;
+                padding: 30px;
+                
+            
+                .skills__row{
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+
+                    h6{
+                        font-size: 1.3vw;
+                        font-family: Lato,'sans-serif';
+                        font-weight: 600;
+                        color: #000000;
+                        margin: 0 0 8px;
+
+                        @media (max-width:768px){
+                            font-size: 3.2vw;
+                        }
+            
+
+                        span{
+                            color: #000;
+                            font-size: 1vw;
+                            font-weight: 400;
+                            @media (max-width:768px){
+                                font-size: 3.2vw;
+                            }    
+                        }
+
+                    }
+
+                    .skills__bar{
+                        height: 5px;
+                        background-color: #eee;
+                        position: relative;
+
+
+                        .skills__bar__in{
+                            background-color: #000000;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+
+
+                        }
+                    }   
+        
+                }
+
+
+                .skills__SoftSkills{
+                    margin-top: 50px;
+
+                    h1{
+                        font-family: Poppins,'sans-serif';
+                        display: block;
+                        color: white;
+                        font-size: 1.2vw;
+                        font-weight: 400;
+                        padding-bottom: 15px;
+                        letter-spacing: 2.5px;
+            
+                        @media (max-width:768px){
+                            font-size: 3.2vw;
+                            letter-spacing: 0.5vw;
+                        }
+            
+                    }
+                    p{
+                        font-family: Lato,'sans-serif';
+                        padding: 5px;
+                    }
+                    
+
+
+                }
+            }
+            .skills__col{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+
+                .skills__image{
+                    flex: 0 75%;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;     
+                    display: flex;   
+                    flex-direction: column;
+                    img{
+                        width: 50%;
+                        height: auto;
+                    }
+                }   
+
+                .skills__tools{
+                    padding: 10px;
+                    
+
+                    h1{
+                        display: block;
+                        font-family: Poppins,'sans-serif';
+                        Text-transform: uppercase;
+                        margin-top: 0;
+                        color: white;
+                        font-size: 1.2vw;
+                        font-weight: 400;
+                        letter-spacing: 2px;
+            
+                        @media (max-width:768px){
+                            font-size: 3.2vw;
+                            letter-spacing: 0.5vw;
+                        }
+                    }
+                    img{
+                        padding-top: 10px;
+                        padding-left: 5px;
+                        width: 40px;
+                        height: auto;
+                        color: #000;
+                    }
+                }
+            }
+
+        }          
+    }
+}   
