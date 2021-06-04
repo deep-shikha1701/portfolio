@@ -19,7 +19,7 @@ function Contact() {
                     <h3>LET'S TALK</h3>
                 </div>
                 <div className="contact__content" method="POST">
-                <form name="contact form" class="form" data-netlify="true" onSubmit="submit">
+                <form name="contact_form" class="form" onSubmit="submit" netlify>
                     <h6>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
                         Simply fill the from and send me an email.</h6>
                     <p type="Name:"><input type="text" name="name" placeholder="Write your name here"></input></p>
