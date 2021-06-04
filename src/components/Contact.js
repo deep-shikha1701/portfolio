@@ -18,14 +18,14 @@ function Contact() {
                     <h1>Contact Me</h1>
                     <h3>LET'S TALK</h3>
                 </div>
-                <div className="contact__content">
-                <form class="form">
+                <div className="contact__content" method="POST">
+                <form class="form" data-netlify="true">
                     <h6>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
                         Simply fill the from and send me an email.</h6>
                     <p type="Name:"><input placeholder="Write your name here"></input></p>
                     <p type="Email:"><input placeholder="Let me know how to contact you back"></input></p>
                     <p type="Message:"><textarea placeholder="What would you like to tell us"/></p>
-                    <button>Send Message</button>
+                    <button type="Submit">Send Message</button>
                     <div className="about__social">
                             <a href="https://www.facebook.com/deepshikha.sahu.3304/"><FacebookIcon fontSize="small" /></a>
                             <a href="https://www.linkedin.com/in/deepshikha10/"><LinkedInIcon fontSize="small" /></a>
