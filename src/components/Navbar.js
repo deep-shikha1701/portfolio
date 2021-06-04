@@ -8,14 +8,6 @@ import logo from './assets/log.png';
 function Navbar() {
 
     const [show, handleShow] = useState(false);
-    const [clicked, setClick] = useState(false);
-
-
-    const handleClick = () =>{
-        setClick(!clicked);
-    }
-
-
 
     const transitionNavBar = () =>{
         if(window.scrollY > 100){
