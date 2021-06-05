@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Contact.scss';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';  
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -8,10 +8,38 @@ import MailIcon from '@material-ui/icons/Mail';
 
 
 function Contact() {
-    return (
 
-        // <p>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-        // Simply fill the from and send me an email.</p>
+    const [value, setValue] = useState({name:"", email:"",message:""});
+
+    const {name,email,message} = value;
+
+    const handleChange = e =>{
+            setValue({...value,[e.target.name]:e.target.value})
+    }   
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+
+        try{
+            const response= await fetch("https://v1.nocodeapi.com/ds1701/google_sheets/HtopwTywLJluVqYq?tabId=Sheet1",{
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify([[name,email,message,new Date().toLocaleString()]])
+
+            });
+            await response.json();
+
+            setValue({...value,name:"",email:"",message:""});
+        }
+        catch(err){
+            console.log(err);
+        }
+    };
+
+
+    return (
         <div id="contact"className="contact">
             <div className="contact__container">
                 <div className="contact__title">
@@ -19,14 +47,13 @@ function Contact() {
                     <h3>LET'S TALK</h3>
                 </div>
                 <div className="contact__content">
-                <form name="contact_v1" className="form" method="POST" onSubmit="submit"  data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact_v1" />
+                <form className="form" action="/" method="POST" onSubmit={handleSubmit}> 
                     <h6>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
                         Simply fill the from and send me an email.</h6>
-                    <p type="Name:"><input type="text" name="Name" placeholder="Write your name here" required /></p>
-                    <p type="Email:"><input type="email" name="Email" required /></p>
-                    <p type="Message:"><textarea type="text" name="Message" placeholder="Leave your message here" required /></p>
-                    <button type="Submit">Send Message</button>
+                    <p type="Name:"><input type="text" name="name" value={name} onChange={handleChange} placeholder="Write your name here" required /></p>
+                    <p type="Email:"><input type="email" name="email" value={email} onChange={handleChange} placeholder="Enter your email address" required /></p>
+                    <p type="Message:"><textarea type="text" value={message} onChange={handleChange} name="message" placeholder="Leave your message here" required /></p>
+                    <button type="Submit">Send message</button>
                     <div className="about__social">
                         <a href="https://www.facebook.com/deepshikha.sahu.3304/"><FacebookIcon fontSize="small" /></a>
                         <a href="https://www.linkedin.com/in/deepshikha10/"><LinkedInIcon fontSize="small" /></a>
