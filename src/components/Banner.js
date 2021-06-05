@@ -28,7 +28,7 @@ function Banner() {
                         <Typed strings={["Deepshikha Sahu"]} typeSpeed={50}/>
                       </h1>
                     <div className="banner__descrption">
-                        <Typed strings={["I am a Frontend Developer and a Backend hustler."]} typeSpeed={40}/>
+                        <Typed strings={["I am a Frontend Developer."]} typeSpeed={40}/>
                     </div>
                     <button onClick={handleClick} className="banner__button">View Resume</button>
                     <div className="banner__social">
