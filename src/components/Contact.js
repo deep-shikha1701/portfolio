@@ -24,7 +24,7 @@ function Contact() {
                     <h6>Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
                         Simply fill the from and send me an email.</h6>
                     <p type="Name:"><input type="text" name="Name" placeholder="Write your name here" required></input></p>
-                    <p type="Email:"><input type="email" name="email" placeholder="Let me know how to contact you back" required></input></p>
+                    <p type="Email:"><input type="email" name="Email" placeholder="Let me know how to contact you back" required></input></p>
                     <p type="Message:"><textarea type="text" name="Message" placeholder="What would you like to tell us" required/></p>
                     <button type="Submit">Send Message</button>
                     <div className="about__social">
