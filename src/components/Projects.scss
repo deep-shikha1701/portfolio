@@ -44,10 +44,11 @@
 
         .projects__content{
             width: 100%;    
-            display: flex;
-            flex-direction:row;
+            display: grid;
+            // flex-direction:;
             flex-wrap: nowrap;
             align-items: center;
+            justify-content: space-between;
             grid-template-columns: auto auto auto;  
             margin-top: 30px;
 
