@@ -12,8 +12,9 @@ function Projects() {
                 </div>
                 <div className="projects__content">
                     <Card title="React - Clock" description={"A simple but attractive clock using HTML, CSS and ReactJS."} link={"https://github.com/deep-shikha1701/Twitter-UI-React"} />
-                    <Card title="Twitter - UI Clone" description={"Cloning twitter UI using ReactJS, Material UI, Firebase."} />
-                    <Card title="Binary Tree Maker" description={"A website where you can create and visualize a binary tree."} />
+                    <Card title="Twitter - UI Clone" description={"Cloning twitter UI using ReactJS, Material UI, Firebase."} link={"https://github.com/deep-shikha1701/Twitter-UI-React"} />
+                    <Card title="Binary Tree Maker" description={"A website where you can create and visualize a binary tree."} link={""} />
+                    <Card title="Crypto-price-Tracker" description={"A price tracker for various cryptocurrencies using ReactJS, TailwindCSS, and Axios"} link={"https://github.com/deep-shikha1701/Crypto-price-tracker"} />
                 </div>
                 
             </div>
